@@ -1,0 +1,69 @@
+# Python interpreter
+*.py[cod]
+/__pycache__/
+/venv/
+/share/
+/docs/
+
+
+# Local configurations
+gis/settings_instance.py
+
+debug.log
+
+# System scripts
+*.bat
+!/utils/*/*.bat
+
+
+# Gulp build
+/node_modules/
+/**/node_modules/*
+
+static/build/*
+static/fonts/*
+!static/libs/gitkeep
+!static/build/gitkeep
+!static/fonts/gitkeep
+
+/*/static/*/build/*
+!/*/static/*/build/gitkeep
+
+templates/gis/build/*
+!templates/gis/build/gitkeep
+
+/*/templates/*/build/*
+!/*/templates/*/build/gitkeep
+
+static_root
+
+gunicorn.log
+gunicorn.pid
+start_gunicorn.sh
+restart_gunicorn.sh
+stop_gunicorn.sh
+status_gunicorn.sh
+
+# Celery
+celerybeat.pid
+celeryev.pid
+
+
+# Virtual environments
+*.vagrant/
+
+
+# IDEs and editors
+
+## Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+## PyCharm
+.idea/
+
+
+# Windows
+Thumbs.db
+.directory
+npm-debug.log

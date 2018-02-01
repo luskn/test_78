@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'revenue/css/style.css' %}" />
+
+<script type="text/javascript" src="{% static 'revenue/js/module.js' %}"></script>
+
+<header>
+    <div class="title">Revenue</div>
+    <div class="control">
+        <div class="d-flex flex-row">
+            From:
+            <input id="from" type="text" name="from">
+        </div>
+        <div class="d-flex flex-row">
+            To:
+            <input id="to" type="text" name="to">
+        </div>
+        <button class="btn refresh">Refresh</button>
+    </div>
+</header>
+<main>
+    <div class="content">
+
+    </div>
+</main>
