@@ -64,6 +64,7 @@ def getSales(request):
     from revenue.models import Revenue
     # import pdb; pdb.set_trace()
     # TODO realize by loads
+    # TODO differ response by state
     date_from_str = json.dumps(request.GET.get('from'))
     date_to_str = json.dumps(request.GET.get('to'))
 

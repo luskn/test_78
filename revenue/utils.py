@@ -21,12 +21,13 @@ def load_from_xlsx_to_revenue(fpath, fname):
     wb = xl.load_workbook(path.join(fpath, fname))
     ws = wb.active
 
-    dates_list = ws[1][1:]
+    dates_list = ws[1][1:]  # получаем список всех дат из файла
     for row in ws.iter_rows(min_row=2):
-        good = row[0].value
+        good = row[0].value  # получаем наименование товара
         if not good:  # Если закончились товары, то прерываем обход
             break
         for ind, cell in enumerate(row[1:]):
+            # выполняем проверку, что за выбранную дату по данному товару данные ещё не загружены
             isExist = check_good_date(in_good=good, in_rev_date=dates_list[ind].value)
             if not isExist:
                 print(good, cell.value, dates_list[ind].value)

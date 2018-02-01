@@ -12,5 +12,5 @@ INSTALL:
 2. Clone project from remote repositor:
 
 
-2. Install requisites
+3. Install requisites
 # pip install -r requirements.txt
